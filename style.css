@@ -1,0 +1,251 @@
+*{
+    box-sizing: border-box;
+}
+
+.section-block{padding:2.5em;}
+    .section-block h1{color: rgb(202, 168, 128);margin-bottom:2em ;font-size: 2.2em;font-weight: bolder;}
+    .section-block h2{margin:1em 0 .5em;font-size: 1.5em;color: rgb(202, 168, 128);font-weight:bolder;}
+    .section-block p{color:#3b4964;margin-bottom: 4em;text-align:justify ;line-height: 30px;}
+
+/*header*/
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding:0 10em;
+    background-color: rgb(228, 206, 183);
+    color:  white;
+  }
+  @media (max-width: 1024px) {
+    .container {
+        padding:0 5em;
+    }
+  }
+  @media (max-width: 767px) {
+    .container {
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+  }
+  .hamburger {
+    position: relative;
+    display: block;
+    width: 35px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+  }
+  .hamburger .bar,
+  .hamburger:after,
+  .hamburger:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: #fff;
+    margin: 6px 0px;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  .hamburger.is-active:before {
+    -webkit-transform: rotate(-45deg) translate(-8px, 6px);
+    transform: rotate(-45deg) translate(-8px, 6px);
+  }
+  .hamburger.is-active:after {
+    -webkit-transform: rotate(45deg) translate(-9px, -8px);
+    transform: rotate(45deg) translate(-9px, -8px);
+  }
+  .hamburger.is-active .bar {
+    opacity: 0;
+  }
+  .mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    min-height: 100vh;
+    display: block; /*pot folosi si display none iar  mai jos  la .mobile-nav.is-active in loc de left: 0 pun display: block*/
+    z-index: 98;
+    background-color: rgb(214, 187, 156);
+    padding-top: 120px;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  .mobile-nav.is-active {
+    left: 0;
+  }
+  .mobile-nav a {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto 16px;
+    text-align: center;
+    padding: 12px 16px;
+    background-color: rgb(228, 206, 183);
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+  }
+  .mobile-nav a:hover {
+    background-color: rgb(233, 215, 198);
+  }
+  @media (min-width: 768px) {
+    .mobile-nav {
+      display: none;
+    }
+    .hamburger {
+      display: none;
+    }
+  }
+
+  .button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    display: inline-block;
+    color: #fff;
+    font-size: 20px;
+    background-color: #ff9fdb;
+    padding: 12px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  @media (max-width: 767px) {
+    .button {
+      font-size: 18px;
+    }
+  }
+  img {
+    max-width: 100%;
+  }
+  
+  header {
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+  }
+  header .container {
+    padding-top:8px;
+    padding-bottom:8px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  header .logo {
+    height: 5em;
+  }
+  header .container nav {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 16px;
+    -ms-grid-columns: (auto) 4;
+    grid-template-columns: repeat(4, auto);
+  }
+  @media (max-width: 767px) {
+    header .container nav {
+      display: none;
+    }
+  }
+  header .container nav a {
+    color: inherit;
+    font-size: 23px;
+    text-decoration: none;
+    margin-right: .5em;
+  }
+  header .container nav a:last-child{
+    margin-right: 0;
+  }
+  header .container nav a:hover{
+    text-decoration: underline;
+  }
+  header.is-scrolling {
+    background-color: #12002f;
+  }
+  header.is-scrolling .container {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  
+/*header*/
+
+
+/*hero*/
+.hero{display: flex; justify-content: center;padding:0 2.5em ;margin-top: 8em;}
+.hero video{width: 100%;height: 100%;margin-bottom: 3em;}
+@media screen and (min-width: 800px){
+    .hero{padding: 0 5em;}
+}
+@media screen and (min-width: 1024px){
+    .hero{padding: 0 10em;}
+}
+
+/*hero*/
+
+/*about-us-section*/
+.about-us-section{padding: 2.5em 2.5em ;}
+    .about-us-section .grid-container-about{padding:0 0 2.5em}
+    .about-us-section img{width: 100%;border-radius: 15px;}
+
+@media screen and (min-width: 800px){
+    .about-us-section{display: flex;justify-content: space-between;align-items: center;padding: 2.5em 5em;}
+    .about-us-section img{width: 50%;height: 50%; margin-left: 2.5em;}
+}
+
+
+/*about-us-section*/
+
+
+/*services-section*/
+.services-section{text-align: center;}
+    .services-section img{width: 6.5em;}
+    .services-section p{text-align: center;}
+
+@media screen and (min-width: 800px){
+    .services-section{padding: 5em 5em;}
+    .services-section .grid-container{display: grid;grid-template-columns: auto auto auto;gap:1.5em}
+    
+}
+
+/*services-section*/
+
+
+/*description-section*/
+.description-section{background-image: url("images/medi-3.jpg");padding: 8em 2.5em;background-repeat: no-repeat;background-position: center;background-size: cover;position: relative;}
+    .description-section p{margin-bottom: 0;color: #ffff;text-align: center;font-size: 1.2em;}
+
+@media screen and (min-width: 1200px){
+    .description-section{height: 20em;}
+    .description-section{display: flex; align-items: center;justify-content: center;}
+    .description-section p{margin:0;font-size: 1.7em;}
+}
+/*description-section*/
+
+/*footer*/
+.details-section {padding: 3em 2.5em;}
+    .details-section  h1{color: #000;margin-bottom: 1em;}
+    .details-section address{margin-bottom: 1em;}
+/*footer*/
+
+@media screen and (min-width: 1200px){
+    .section-block{padding: 5em 10em;}
+}
+
